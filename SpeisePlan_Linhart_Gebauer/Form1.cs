@@ -16,5 +16,15 @@ namespace SpeisePlan_Linhart_Gebauer
         {
             InitializeComponent();
         }
+
+        private void zutatenHnizufügenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void speiseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
