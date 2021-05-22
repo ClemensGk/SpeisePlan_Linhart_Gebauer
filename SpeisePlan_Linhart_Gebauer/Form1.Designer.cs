@@ -30,142 +30,54 @@
         {
             this.components = new System.ComponentModel.Container();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lblSpeisen = new System.Windows.Forms.Label();
-            this.lblZutaten = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.zutatenHnizufügenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zutatBearbeitenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zutatEntfernenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.neueZutatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.speiseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.beendenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.speiseHinzufügenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.speiseBearbeitenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.speiseEntfernenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblSpeisen = new System.Windows.Forms.Label();
+            this.lblZutaten = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.speiseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.beendenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.wochenspeiseplanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.erstellenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // listView1
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader6,
-            this.columnHeader8,
             this.columnHeader7,
+            this.columnHeader8,
             this.columnHeader9});
             this.listView1.ContextMenuStrip = this.contextMenuStrip1;
             this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(708, 160);
+            this.listView1.Location = new System.Drawing.Point(688, 160);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(539, 303);
+            this.listView1.Size = new System.Drawing.Size(611, 303);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // listView2
-            // 
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader4,
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader5});
-            this.listView2.ContextMenuStrip = this.contextMenuStrip2;
-            this.listView2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(12, 160);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(623, 303);
-            this.listView2.TabIndex = 3;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.DisplayIndex = 0;
-            this.columnHeader1.Text = "SpeiseID";
-            this.columnHeader1.Width = 79;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.DisplayIndex = 1;
-            this.columnHeader2.Text = "Speisename";
-            this.columnHeader2.Width = 95;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.DisplayIndex = 2;
-            this.columnHeader3.Text = "Kosten der Speise";
-            this.columnHeader3.Width = 144;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.DisplayIndex = 3;
-            this.columnHeader4.Text = "Bild";
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Speiseart";
-            this.columnHeader5.Width = 87;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Menge";
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.DisplayIndex = 1;
-            this.columnHeader7.Text = "Bezeichnung";
-            this.columnHeader7.Width = 107;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.DisplayIndex = 2;
-            this.columnHeader8.Text = "Einheit";
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Allergene";
-            this.columnHeader9.Width = 75;
-            // 
-            // lblSpeisen
-            // 
-            this.lblSpeisen.AutoSize = true;
-            this.lblSpeisen.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSpeisen.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblSpeisen.Location = new System.Drawing.Point(249, 119);
-            this.lblSpeisen.Name = "lblSpeisen";
-            this.lblSpeisen.Size = new System.Drawing.Size(102, 29);
-            this.lblSpeisen.TabIndex = 4;
-            this.lblSpeisen.Text = "Speisen";
-            // 
-            // lblZutaten
-            // 
-            this.lblZutaten.AutoSize = true;
-            this.lblZutaten.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblZutaten.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblZutaten.Location = new System.Drawing.Point(872, 119);
-            this.lblZutaten.Name = "lblZutaten";
-            this.lblZutaten.Size = new System.Drawing.Size(216, 29);
-            this.lblZutaten.TabIndex = 5;
-            this.lblZutaten.Text = "Zutaten der Speise";
             // 
             // contextMenuStrip1
             // 
@@ -187,7 +99,7 @@
             // zutatBearbeitenToolStripMenuItem
             // 
             this.zutatBearbeitenToolStripMenuItem.Name = "zutatBearbeitenToolStripMenuItem";
-            this.zutatBearbeitenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.zutatBearbeitenToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.zutatBearbeitenToolStripMenuItem.Text = "Zutat bearbeiten";
             // 
             // zutatEntfernenToolStripMenuItem
@@ -202,32 +114,53 @@
             this.neueZutatToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.neueZutatToolStripMenuItem.Text = "neue Zutat";
             // 
-            // menuStrip1
+            // listView2
             // 
-            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.speiseToolStripMenuItem,
-            this.wochenspeiseplanToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1311, 33);
-            this.menuStrip1.TabIndex = 8;
-            this.menuStrip1.Text = "menuStrip1";
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader4,
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader5});
+            this.listView2.ContextMenuStrip = this.contextMenuStrip2;
+            this.listView2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView2.HideSelection = false;
+            this.listView2.Location = new System.Drawing.Point(12, 160);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(623, 303);
+            this.listView2.TabIndex = 3;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
+            this.listView2.SelectedIndexChanged += new System.EventHandler(this.listView2_SelectedIndexChanged);
             // 
-            // speiseToolStripMenuItem
+            // columnHeader4
             // 
-            this.speiseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.beendenToolStripMenuItem});
-            this.speiseToolStripMenuItem.Name = "speiseToolStripMenuItem";
-            this.speiseToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
-            this.speiseToolStripMenuItem.Text = "Speiseplan";
-            this.speiseToolStripMenuItem.Click += new System.EventHandler(this.speiseToolStripMenuItem_Click);
+            this.columnHeader4.DisplayIndex = 3;
+            this.columnHeader4.Text = "Speiseart";
+            this.columnHeader4.Width = 104;
             // 
-            // beendenToolStripMenuItem
+            // columnHeader1
             // 
-            this.beendenToolStripMenuItem.Name = "beendenToolStripMenuItem";
-            this.beendenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.beendenToolStripMenuItem.Text = "beenden";
+            this.columnHeader1.DisplayIndex = 0;
+            this.columnHeader1.Text = "SpeiseID";
+            this.columnHeader1.Width = 90;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.DisplayIndex = 1;
+            this.columnHeader2.Text = "Speisename";
+            this.columnHeader2.Width = 124;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.DisplayIndex = 2;
+            this.columnHeader3.Text = "Preis";
+            this.columnHeader3.Width = 157;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Bild";
+            this.columnHeader5.Width = 149;
             // 
             // contextMenuStrip2
             // 
@@ -256,18 +189,68 @@
             this.speiseEntfernenToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.speiseEntfernenToolStripMenuItem.Text = "Speise entfernen";
             // 
+            // lblSpeisen
+            // 
+            this.lblSpeisen.AutoSize = true;
+            this.lblSpeisen.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSpeisen.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lblSpeisen.Location = new System.Drawing.Point(249, 119);
+            this.lblSpeisen.Name = "lblSpeisen";
+            this.lblSpeisen.Size = new System.Drawing.Size(102, 29);
+            this.lblSpeisen.TabIndex = 4;
+            this.lblSpeisen.Text = "Speisen";
+            // 
+            // lblZutaten
+            // 
+            this.lblZutaten.AutoSize = true;
+            this.lblZutaten.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblZutaten.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lblZutaten.Location = new System.Drawing.Point(872, 119);
+            this.lblZutaten.Name = "lblZutaten";
+            this.lblZutaten.Size = new System.Drawing.Size(216, 29);
+            this.lblZutaten.TabIndex = 5;
+            this.lblZutaten.Text = "Zutaten der Speise";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.speiseToolStripMenuItem,
+            this.wochenspeiseplanToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1311, 33);
+            this.menuStrip1.TabIndex = 8;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // speiseToolStripMenuItem
+            // 
+            this.speiseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.beendenToolStripMenuItem});
+            this.speiseToolStripMenuItem.Name = "speiseToolStripMenuItem";
+            this.speiseToolStripMenuItem.Size = new System.Drawing.Size(115, 29);
+            this.speiseToolStripMenuItem.Text = "Speiseplan";
+            this.speiseToolStripMenuItem.Click += new System.EventHandler(this.speiseToolStripMenuItem_Click);
+            // 
+            // beendenToolStripMenuItem
+            // 
+            this.beendenToolStripMenuItem.Name = "beendenToolStripMenuItem";
+            this.beendenToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
+            this.beendenToolStripMenuItem.Text = "beenden";
+            this.beendenToolStripMenuItem.Click += new System.EventHandler(this.beendenToolStripMenuItem_Click);
+            // 
             // wochenspeiseplanToolStripMenuItem
             // 
             this.wochenspeiseplanToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.erstellenToolStripMenuItem});
             this.wochenspeiseplanToolStripMenuItem.Name = "wochenspeiseplanToolStripMenuItem";
-            this.wochenspeiseplanToolStripMenuItem.Size = new System.Drawing.Size(118, 20);
+            this.wochenspeiseplanToolStripMenuItem.Size = new System.Drawing.Size(182, 29);
             this.wochenspeiseplanToolStripMenuItem.Text = "Wochenspeiseplan";
             // 
             // erstellenToolStripMenuItem
             // 
             this.erstellenToolStripMenuItem.Name = "erstellenToolStripMenuItem";
-            this.erstellenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.erstellenToolStripMenuItem.Size = new System.Drawing.Size(156, 30);
             this.erstellenToolStripMenuItem.Text = "erstellen";
             // 
             // label1
@@ -280,6 +263,26 @@
             this.label1.Size = new System.Drawing.Size(188, 39);
             this.label1.TabIndex = 10;
             this.label1.Text = "Speiseplan";
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Menge";
+            this.columnHeader6.Width = 108;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Einheit";
+            this.columnHeader7.Width = 93;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Bezeichnung";
+            this.columnHeader8.Width = 147;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Allergene";
+            this.columnHeader9.Width = 147;
             // 
             // Form1
             // 
@@ -299,10 +302,11 @@
             this.RightToLeftLayout = true;
             this.Text = "Speiseplan";
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.contextMenuStrip1.ResumeLayout(false);
+            this.contextMenuStrip2.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.contextMenuStrip2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -311,10 +315,6 @@
         #endregion
 
         private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
-        private System.Windows.Forms.ColumnHeader columnHeader8;
-        private System.Windows.Forms.ColumnHeader columnHeader7;
-        private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.ListView listView2;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader1;
@@ -338,6 +338,10 @@
         private System.Windows.Forms.ToolStripMenuItem wochenspeiseplanToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem erstellenToolStripMenuItem;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
     }
 }
 

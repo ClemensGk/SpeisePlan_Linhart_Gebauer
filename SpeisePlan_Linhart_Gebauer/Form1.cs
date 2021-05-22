@@ -17,12 +17,27 @@ namespace SpeisePlan_Linhart_Gebauer
             InitializeComponent();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void zutatenHnizufügenToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
 
         private void speiseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void beendenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void listView2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
