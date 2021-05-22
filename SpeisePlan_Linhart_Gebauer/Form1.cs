@@ -16,11 +16,22 @@ namespace SpeisePlan_Linhart_Gebauer
         {
             InitializeComponent();
         }
+        #region Variable
+        ListViewItem lvItem;
 
+
+        #endregion
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            listView1.FullRowSelect = true;
+            listView2.FullRowSelect = true;
         }
+
+
+        #region Methoden
+
+
+        #endregion
 
         private void zutatenHnizufügenToolStripMenuItem_Click(object sender, EventArgs e)
         {
