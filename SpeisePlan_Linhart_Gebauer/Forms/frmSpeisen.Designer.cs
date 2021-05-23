@@ -1,7 +1,7 @@
 ﻿
 namespace SpeisePlan_Linhart_Gebauer.Forms
 {
-    partial class Speisen
+    partial class frmSpeisen
     {
         /// <summary>
         /// Required designer variable.
@@ -203,6 +203,7 @@ namespace SpeisePlan_Linhart_Gebauer.Forms
             this.Controls.Add(this.label1);
             this.Name = "Speisen";
             this.Text = "Speisen";
+            this.Load += new System.EventHandler(this.Speisen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

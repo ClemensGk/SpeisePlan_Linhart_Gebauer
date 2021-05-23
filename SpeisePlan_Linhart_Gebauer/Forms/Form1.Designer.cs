@@ -30,6 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.zutatenHnizufügenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zutatBearbeitenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,10 +57,6 @@
             this.wochenspeiseplanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.erstellenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip1.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -78,6 +78,26 @@
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Menge";
+            this.columnHeader6.Width = 108;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Einheit";
+            this.columnHeader7.Width = 93;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Bezeichnung";
+            this.columnHeader8.Width = 147;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Allergene";
+            this.columnHeader9.Width = 147;
             // 
             // contextMenuStrip1
             // 
@@ -169,24 +189,25 @@
             this.speiseBearbeitenToolStripMenuItem,
             this.speiseEntfernenToolStripMenuItem});
             this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(171, 70);
+            this.contextMenuStrip2.Size = new System.Drawing.Size(181, 92);
             // 
             // speiseHinzufügenToolStripMenuItem
             // 
             this.speiseHinzufügenToolStripMenuItem.Name = "speiseHinzufügenToolStripMenuItem";
-            this.speiseHinzufügenToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.speiseHinzufügenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.speiseHinzufügenToolStripMenuItem.Text = "Speise hinzufügen";
+            this.speiseHinzufügenToolStripMenuItem.Click += new System.EventHandler(this.speiseHinzufügenToolStripMenuItem_Click);
             // 
             // speiseBearbeitenToolStripMenuItem
             // 
             this.speiseBearbeitenToolStripMenuItem.Name = "speiseBearbeitenToolStripMenuItem";
-            this.speiseBearbeitenToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.speiseBearbeitenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.speiseBearbeitenToolStripMenuItem.Text = "Speise bearbeiten";
             // 
             // speiseEntfernenToolStripMenuItem
             // 
             this.speiseEntfernenToolStripMenuItem.Name = "speiseEntfernenToolStripMenuItem";
-            this.speiseEntfernenToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.speiseEntfernenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.speiseEntfernenToolStripMenuItem.Text = "Speise entfernen";
             // 
             // lblSpeisen
@@ -235,7 +256,7 @@
             // beendenToolStripMenuItem
             // 
             this.beendenToolStripMenuItem.Name = "beendenToolStripMenuItem";
-            this.beendenToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
+            this.beendenToolStripMenuItem.Size = new System.Drawing.Size(158, 30);
             this.beendenToolStripMenuItem.Text = "beenden";
             this.beendenToolStripMenuItem.Click += new System.EventHandler(this.beendenToolStripMenuItem_Click);
             // 
@@ -263,26 +284,6 @@
             this.label1.Size = new System.Drawing.Size(188, 39);
             this.label1.TabIndex = 10;
             this.label1.Text = "Speiseplan";
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Menge";
-            this.columnHeader6.Width = 108;
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Einheit";
-            this.columnHeader7.Width = 93;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Bezeichnung";
-            this.columnHeader8.Width = 147;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Allergene";
-            this.columnHeader9.Width = 147;
             // 
             // Form1
             // 

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SpeisePlan_Linhart_Gebauer.Klassen
+namespace SpeisePlan_Linhart_Gebauer
 {
-    class Zutat
+   public class Zutat
     {
         //Objektvariablen
    
@@ -23,7 +23,7 @@ namespace SpeisePlan_Linhart_Gebauer.Klassen
        
             this.menge = menge;
             this.einheit = einheit;
-            this.bezeichnug = bezeichnug;
+            this.bezeichnug = bezeichnung;
             this.allergene = allergene;
         }
 

@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Xml;
+using System.Xml.Serialization;
+using System.Security.Cryptography;
 
 namespace SpeisePlan_Linhart_Gebauer
 {
@@ -18,6 +22,7 @@ namespace SpeisePlan_Linhart_Gebauer
         }
         #region Variable
         ListViewItem lvItem;
+        internal List<Speise> speisenListe;
 
 
         #endregion
@@ -52,5 +57,31 @@ namespace SpeisePlan_Linhart_Gebauer
         {
 
         }
-    }
+
+        private void speiseHinzufügenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void einlesenSpeise()
+        {
+            listView1.Items.Clear();
+            for (int i = 0; i < speisenListe.Count; i++)
+            {
+                
+                
+                    lvItem = new ListViewItem();
+                    lvItem.ImageIndex = i;
+                    lvItem.SubItems.Add(speisenListe[i].SpeiseID.ToString());
+                    lvItem.SubItems.Add(speisenListe[i].Name);
+                    lvItem.SubItems.Add(speisenListe[i].Preis.ToString());
+                    lvItem.SubItems.Add(speisenListe[i].Speiseart.ToString());
+                    lvItem.SubItems.Add(speisenListe[i].Bildpfad);
+                    listView1.Items.Add(lvItem);
+                
+            }
+        }
+
+           
+        }
 }
