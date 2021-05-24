@@ -57,6 +57,7 @@
             this.wochenspeiseplanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.erstellenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
+            this.zutatEinerSpeiseHinzufügenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -187,9 +188,10 @@
             this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.speiseHinzufügenToolStripMenuItem,
             this.speiseBearbeitenToolStripMenuItem,
-            this.speiseEntfernenToolStripMenuItem});
+            this.speiseEntfernenToolStripMenuItem,
+            this.zutatEinerSpeiseHinzufügenToolStripMenuItem});
             this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(181, 92);
+            this.contextMenuStrip2.Size = new System.Drawing.Size(231, 92);
             // 
             // speiseHinzufügenToolStripMenuItem
             // 
@@ -285,6 +287,12 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Speiseplan";
             // 
+            // zutatEinerSpeiseHinzufügenToolStripMenuItem
+            // 
+            this.zutatEinerSpeiseHinzufügenToolStripMenuItem.Name = "zutatEinerSpeiseHinzufügenToolStripMenuItem";
+            this.zutatEinerSpeiseHinzufügenToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
+            this.zutatEinerSpeiseHinzufügenToolStripMenuItem.Text = "Zutat einer Speise hinzufügen";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -343,6 +351,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ToolStripMenuItem zutatEinerSpeiseHinzufügenToolStripMenuItem;
     }
 }
 

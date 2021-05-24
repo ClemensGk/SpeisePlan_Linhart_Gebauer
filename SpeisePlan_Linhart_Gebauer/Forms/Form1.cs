@@ -12,6 +12,7 @@ using System.Xml;
 using System.Xml.Serialization;
 using System.Security.Cryptography;
 
+
 namespace SpeisePlan_Linhart_Gebauer
 {
     public partial class Form1 : Form
@@ -40,6 +41,7 @@ namespace SpeisePlan_Linhart_Gebauer
 
         private void zutatenHnizufügenToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            hinzufuegenZutaten();
 
         }
 
@@ -60,7 +62,7 @@ namespace SpeisePlan_Linhart_Gebauer
 
         private void speiseHinzufügenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+            hinzufuegenSpeise();
         }
 
         private void einlesenSpeise()
@@ -80,8 +82,27 @@ namespace SpeisePlan_Linhart_Gebauer
                     listView1.Items.Add(lvItem);
                 
             }
+            listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
         }
 
-           
+        public void hinzufuegenZutaten()
+        {
+
+
+            frmZutaten frmzutaten = new frmZutaten();
+            frmzutaten.Text = "Zutat hinzufügen";
+            frmzutaten.ShowDialog();
+            //einlesenZutat();
         }
+
+        public void hinzufuegenSpeise()
+        {
+            frmSpeisen frmspeisen = new frmSpeisen();
+            frmspeisen.Text = "Speise hinzufügen";
+            frmspeisen.ShowDialog();
+            //einlesenSpeisen
+        }
+
+    }
 }

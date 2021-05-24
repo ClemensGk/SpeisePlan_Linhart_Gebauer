@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace SpeisePlan_Linhart_Gebauer
 {
-    public partial class frmSpeisen : Form
+    public partial class frmZutaten : Form
     {
-        internal static frmSpeisen frmspeisen;
-        public frmSpeisen()
+        internal static frmZutaten frmzutaten;
+        public frmZutaten()
         {
-            frmspeisen = this;
+            frmzutaten = this;
             InitializeComponent();
         }
 
-        private void frmSpeisen_Load(object sender, EventArgs e)
+        private void frmZutaten_Load(object sender, EventArgs e)
         {
 
         }
