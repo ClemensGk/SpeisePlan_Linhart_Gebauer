@@ -27,10 +27,26 @@ namespace SpeisePlan_Linhart_Gebauer
             this.allergene = allergene;
         }
 
-        public int Menge { get; set; }
-        public string Einheit { get; set; }
-        public string Bezeichnung  { get; set; }
-        public string Allergene { get; set; }
+        public int Menge
+        {
+            get { return menge; }
+            set { menge = value; }
+        }
+        public string Einheit
+        {
+            get { return einheit; }
+            set { einheit = value; }
+        }
+        public string Bezeichnung
+        {
+            get { return bezeichnug; }
+            set { bezeichnug = value; }
+        }
+        public string Allergene
+        {
+            get { return allergene; }
+            set { allergene = value; }
+        }
 
 
 

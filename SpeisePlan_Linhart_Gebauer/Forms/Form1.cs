@@ -104,5 +104,17 @@ namespace SpeisePlan_Linhart_Gebauer
             //einlesenSpeisen
         }
 
+        public void anzeigenZutatenliste()
+        {
+            frmZutatenliste frmzutatenliste = new frmZutatenliste();
+            frmzutatenliste.Text = "Zutatenliste";
+            frmzutatenliste.ShowDialog();
+            //einlesenZutatenliste
+        }
+
+        private void anzeigenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            anzeigenZutatenliste();
+        }
     }
 }

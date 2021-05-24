@@ -23,5 +23,21 @@ namespace SpeisePlan_Linhart_Gebauer
         {
 
         }
+
+        private void btnSpeichern_Click(object sender, EventArgs e)
+        {
+            if (this.Text.Equals("Zutat hinzufügen"))
+            {
+                Zutat z = new Zutat(Convert.ToInt32(txtMenge.Text), txtEinheit.Text, txtBezeichnung.Text, txtAllergene.Text);
+                frmZutatenliste.frmzutatenliste.zutatenListe.Add(z);
+                txtMenge.Clear();
+                txtEinheit.Clear();
+                txtBezeichnung.Clear();
+                txtAllergene.Clear();
+                this.Close();
+            }
+            frmZutatenliste.frmzutatenliste.einlesenZutatenliste();
+           
+        }
     }
 }
