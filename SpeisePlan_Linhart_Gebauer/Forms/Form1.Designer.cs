@@ -57,9 +57,9 @@
             this.beendenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.wochenspeiseplanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.erstellenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
             this.zutatenlisteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.anzeigenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
             this.contextMenuStrip1.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -76,7 +76,7 @@
             this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(917, 197);
-            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(813, 372);
             this.listView1.TabIndex = 0;
@@ -151,7 +151,7 @@
             this.listView2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView2.HideSelection = false;
             this.listView2.Location = new System.Drawing.Point(16, 197);
-            this.listView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView2.Margin = new System.Windows.Forms.Padding(4);
             this.listView2.Name = "listView2";
             this.listView2.Size = new System.Drawing.Size(829, 372);
             this.listView2.TabIndex = 3;
@@ -169,7 +169,7 @@
             // 
             this.columnHeader1.DisplayIndex = 0;
             this.columnHeader1.Text = "SpeiseID";
-            this.columnHeader1.Width = 90;
+            this.columnHeader1.Width = 119;
             // 
             // columnHeader2
             // 
@@ -289,20 +289,8 @@
             // erstellenToolStripMenuItem
             // 
             this.erstellenToolStripMenuItem.Name = "erstellenToolStripMenuItem";
-            this.erstellenToolStripMenuItem.Size = new System.Drawing.Size(224, 36);
+            this.erstellenToolStripMenuItem.Size = new System.Drawing.Size(195, 36);
             this.erstellenToolStripMenuItem.Text = "erstellen";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Turquoise;
-            this.label1.Location = new System.Drawing.Point(760, 54);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(238, 52);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Speiseplan";
             // 
             // zutatenlisteToolStripMenuItem
             // 
@@ -315,9 +303,21 @@
             // anzeigenToolStripMenuItem
             // 
             this.anzeigenToolStripMenuItem.Name = "anzeigenToolStripMenuItem";
-            this.anzeigenToolStripMenuItem.Size = new System.Drawing.Size(224, 36);
+            this.anzeigenToolStripMenuItem.Size = new System.Drawing.Size(201, 36);
             this.anzeigenToolStripMenuItem.Text = "anzeigen";
             this.anzeigenToolStripMenuItem.Click += new System.EventHandler(this.anzeigenToolStripMenuItem_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Turquoise;
+            this.label1.Location = new System.Drawing.Point(760, 54);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(238, 52);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Speiseplan";
             // 
             // Form1
             // 
@@ -333,7 +333,7 @@
             this.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.HelpButton = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.RightToLeftLayout = true;
             this.Text = "Speiseplan";

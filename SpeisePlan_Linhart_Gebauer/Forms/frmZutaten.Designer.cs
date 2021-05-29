@@ -64,6 +64,7 @@ namespace SpeisePlan_Linhart_Gebauer
             this.btnAbbrechen.TabIndex = 55;
             this.btnAbbrechen.Text = "Abbrechen";
             this.btnAbbrechen.UseVisualStyleBackColor = true;
+            this.btnAbbrechen.Click += new System.EventHandler(this.btnAbbrechen_Click);
             // 
             // txtBezeichnung
             // 

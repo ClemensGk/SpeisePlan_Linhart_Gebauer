@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace SpeisePlan_Linhart_Gebauer
 {
@@ -21,15 +24,39 @@ namespace SpeisePlan_Linhart_Gebauer
 
         ListViewItem lvItemZ;
         internal List<Zutat> zutatenListe = new List<Zutat>();
+        internal int inde;
+        internal XmlSerializer serializer;
+
 
         private void frmZutatenliste_Load(object sender, EventArgs e)
         {
             listView1.FullRowSelect = true;
-            zutatenListe.Add(new Zutat(3, "Stück", "mehl", "c"));
 
+            zutatenListe = new List<Zutat>();
+
+            //zutatenListe.Add(new Zutat(3, "Stück", "mehl", "c"));
+
+            //deserialisierenZutaten();
             einlesenZutatenliste();
         }
 
+        #region Speichern
+
+        internal void serialisierenZutaten()
+        {
+            serializer = new XmlSerializer(zutatenListe.GetType());
+            FileStream fs = new FileStream("Zutatenliste.xml", FileMode.Create, FileAccess.Write, FileShare.None);
+            serializer.Serialize(fs, zutatenListe);
+            fs.Close();
+
+        }
+
+         internal void deserialisierenZutaten()
+        {
+            
+        }
+
+        #endregion
 
         public void einlesenZutatenliste()
         {
@@ -53,7 +80,51 @@ namespace SpeisePlan_Linhart_Gebauer
             frmZutaten frmzutaten = new frmZutaten();
             frmzutaten.Text = "Zutat hinzufügen";
             frmzutaten.ShowDialog();
-            //einlesenZutat();
+            einlesenZutatenliste();
+        }
+
+        private void zutatBearbeitenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Keine Zutat ausgewählt!");
+                return;
+            }
+            frmZutaten frmzutaten = new frmZutaten();
+            frmzutaten.Text = "Zutat bearbeiten";
+            frmzutaten.ShowDialog();
+            einlesenZutatenliste();
+        }
+
+       
+        private void zutatLöschenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Keine Zutat ausgewählt!");
+                return;
+            }
+            try
+            {
+                DialogResult dr =
+                  MessageBox.Show("Wollen Sie diese Zutat wirklich löschen?", "Achtung!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (dr == DialogResult.Yes)
+                {
+                    zutatenListe.RemoveAt(inde);
+
+                    einlesenZutatenliste();
+                }
+
+            }
+            catch
+            {
+                MessageBox.Show("Kein Gast ausgewählt!");
+            }
+        }
+
+        private void frmZutatenliste_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            serialisierenZutaten();
         }
     }
 }

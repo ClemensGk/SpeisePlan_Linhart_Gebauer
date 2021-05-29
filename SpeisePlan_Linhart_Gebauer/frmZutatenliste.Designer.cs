@@ -35,10 +35,11 @@ namespace SpeisePlan_Linhart_Gebauer
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label1 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.zutatHinzufügenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zutatBearbeitenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
+            this.zutatLöschenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,6 +81,31 @@ namespace SpeisePlan_Linhart_Gebauer
             this.columnHeader9.Text = "Allergene";
             this.columnHeader9.Width = 147;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.zutatHinzufügenToolStripMenuItem,
+            this.zutatBearbeitenToolStripMenuItem,
+            this.zutatLöschenToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(276, 112);
+            // 
+            // zutatHinzufügenToolStripMenuItem
+            // 
+            this.zutatHinzufügenToolStripMenuItem.Name = "zutatHinzufügenToolStripMenuItem";
+            this.zutatHinzufügenToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.zutatHinzufügenToolStripMenuItem.Text = "Zutat hinzufügen";
+            this.zutatHinzufügenToolStripMenuItem.Click += new System.EventHandler(this.zutatHinzufügenToolStripMenuItem_Click);
+            // 
+            // zutatBearbeitenToolStripMenuItem
+            // 
+            this.zutatBearbeitenToolStripMenuItem.Name = "zutatBearbeitenToolStripMenuItem";
+            this.zutatBearbeitenToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.zutatBearbeitenToolStripMenuItem.Text = "Zutat bearbeiten";
+            this.zutatBearbeitenToolStripMenuItem.Click += new System.EventHandler(this.zutatBearbeitenToolStripMenuItem_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -87,31 +113,16 @@ namespace SpeisePlan_Linhart_Gebauer
             this.label1.ForeColor = System.Drawing.Color.Blue;
             this.label1.Location = new System.Drawing.Point(40, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(311, 58);
+            this.label1.Size = new System.Drawing.Size(249, 46);
             this.label1.TabIndex = 2;
             this.label1.Text = "Zutatenliste:";
             // 
-            // contextMenuStrip1
+            // zutatLöschenToolStripMenuItem
             // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.zutatHinzufügenToolStripMenuItem,
-            this.zutatBearbeitenToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(191, 52);
-            // 
-            // zutatHinzufügenToolStripMenuItem
-            // 
-            this.zutatHinzufügenToolStripMenuItem.Name = "zutatHinzufügenToolStripMenuItem";
-            this.zutatHinzufügenToolStripMenuItem.Size = new System.Drawing.Size(190, 24);
-            this.zutatHinzufügenToolStripMenuItem.Text = "Zutat hinzufügen";
-            this.zutatHinzufügenToolStripMenuItem.Click += new System.EventHandler(this.zutatHinzufügenToolStripMenuItem_Click);
-            // 
-            // zutatBearbeitenToolStripMenuItem
-            // 
-            this.zutatBearbeitenToolStripMenuItem.Name = "zutatBearbeitenToolStripMenuItem";
-            this.zutatBearbeitenToolStripMenuItem.Size = new System.Drawing.Size(190, 24);
-            this.zutatBearbeitenToolStripMenuItem.Text = "Zutat bearbeiten";
+            this.zutatLöschenToolStripMenuItem.Name = "zutatLöschenToolStripMenuItem";
+            this.zutatLöschenToolStripMenuItem.Size = new System.Drawing.Size(275, 36);
+            this.zutatLöschenToolStripMenuItem.Text = "Zutat löschen";
+            this.zutatLöschenToolStripMenuItem.Click += new System.EventHandler(this.zutatLöschenToolStripMenuItem_Click);
             // 
             // frmZutatenliste
             // 
@@ -122,6 +133,7 @@ namespace SpeisePlan_Linhart_Gebauer
             this.Controls.Add(this.listView1);
             this.Name = "frmZutatenliste";
             this.Text = "frmZutatenliste";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmZutatenliste_FormClosing);
             this.Load += new System.EventHandler(this.frmZutatenliste_Load);
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -139,5 +151,6 @@ namespace SpeisePlan_Linhart_Gebauer
         private System.Windows.Forms.ToolStripMenuItem zutatBearbeitenToolStripMenuItem;
         public System.Windows.Forms.ListView listView1;
         public System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem zutatLöschenToolStripMenuItem;
     }
 }
