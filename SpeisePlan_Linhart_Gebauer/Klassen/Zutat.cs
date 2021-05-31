@@ -19,7 +19,9 @@ namespace SpeisePlan_Linhart_Gebauer
 
 
         //Konstruktoren
-
+        public Zutat()
+        { }
+        
         public Zutat(int menge, string einheit, string bezeichnung, string allergene)
         {
        

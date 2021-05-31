@@ -17,13 +17,15 @@ namespace SpeisePlan_Linhart_Gebauer
 {
     public partial class Form1 : Form
     {
+        internal static Form1 f1;
         public Form1()
         {
+            f1 = this;
             InitializeComponent();
         }
         #region Variable
         ListViewItem lvItem;
-        internal List<Speise> speisenListe;
+        internal List<Speise> speisenListe= new List<Speise>();
 
 
         #endregion
@@ -45,19 +47,9 @@ namespace SpeisePlan_Linhart_Gebauer
 
         }
 
-        private void speiseToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void beendenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void listView2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void speiseHinzufügenToolStripMenuItem_Click(object sender, EventArgs e)
@@ -67,11 +59,9 @@ namespace SpeisePlan_Linhart_Gebauer
 
         private void einlesenSpeise()
         {
-            listView1.Items.Clear();
+            listView2.Items.Clear();
             for (int i = 0; i < speisenListe.Count; i++)
             {
-                
-                
                     lvItem = new ListViewItem();
                     lvItem.ImageIndex = i;
                     lvItem.SubItems.Add(speisenListe[i].SpeiseID.ToString());
@@ -79,7 +69,7 @@ namespace SpeisePlan_Linhart_Gebauer
                     lvItem.SubItems.Add(speisenListe[i].Preis.ToString());
                     lvItem.SubItems.Add(speisenListe[i].Speiseart.ToString());
                     lvItem.SubItems.Add(speisenListe[i].Bildpfad);
-                    listView1.Items.Add(lvItem);
+                    listView2.Items.Add(lvItem);
                 
             }
             listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
@@ -88,8 +78,6 @@ namespace SpeisePlan_Linhart_Gebauer
 
         public void hinzufuegenZutaten()
         {
-
-
             frmZutaten frmzutaten = new frmZutaten();
             frmzutaten.Text = "Zutat hinzufügen";
             frmzutaten.ShowDialog();
@@ -101,7 +89,7 @@ namespace SpeisePlan_Linhart_Gebauer
             frmSpeisen frmspeisen = new frmSpeisen();
             frmspeisen.Text = "Speise hinzufügen";
             frmspeisen.ShowDialog();
-            //einlesenSpeisen
+            einlesenSpeise();
         }
 
         public void anzeigenZutatenliste()
@@ -115,6 +103,43 @@ namespace SpeisePlan_Linhart_Gebauer
         private void anzeigenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             anzeigenZutatenliste();
+        }
+
+        private void speiseBearbeitenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (listView2.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Bitte wählen Sie eine Speise aus!");
+                return;
+            }
+            frmSpeisen frmSp = new frmSpeisen();
+            frmSp.Text = "Speise bearbeiten";
+            lvItem = listView2.SelectedItems[0];
+            frmSp.txtSpeiseID.Text = lvItem.SubItems[1].Text;
+            frmSp.txtName.Text = lvItem.SubItems[2].Text;
+            frmSp.txtPreis.Text = lvItem.SubItems[3].Text;
+            frmSp.comboBox1.Text = lvItem.SubItems[4].Text;
+            frmSp.ShowDialog();
+            einlesenSpeise();
+        }
+
+        private void speiseEntfernenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (listView2.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Bitte wählen sie eine Speise aus!");
+                return;
+            }
+            int inde;
+            lvItem = listView2.SelectedItems[0];
+            inde = lvItem.Index;
+
+            DialogResult antwort = MessageBox.Show("Wollen Sie diese Speise wirklich löschen?", "Achtung", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (antwort == DialogResult.Yes)
+            {
+                speisenListe.RemoveAt(inde);
+                einlesenSpeise();
+            }
         }
     }
 }

@@ -55,6 +55,7 @@ namespace SpeisePlan_Linhart_Gebauer
             this.btnSpeichern.TabIndex = 42;
             this.btnSpeichern.Text = "Speichern";
             this.btnSpeichern.UseVisualStyleBackColor = true;
+            this.btnSpeichern.Click += new System.EventHandler(this.btnSpeichern_Click);
             // 
             // btnAbbrechen
             // 
@@ -65,6 +66,7 @@ namespace SpeisePlan_Linhart_Gebauer
             this.btnAbbrechen.TabIndex = 41;
             this.btnAbbrechen.Text = "Abbrechen";
             this.btnAbbrechen.UseVisualStyleBackColor = true;
+            this.btnAbbrechen.Click += new System.EventHandler(this.btnAbbrechen_Click);
             // 
             // comboBox1
             // 
@@ -213,17 +215,17 @@ namespace SpeisePlan_Linhart_Gebauer
 
         public System.Windows.Forms.Button btnSpeichern;
         public System.Windows.Forms.Button btnAbbrechen;
-        public System.Windows.Forms.ComboBox comboBox1;
-        public System.Windows.Forms.TextBox textBildpfad;
-        public System.Windows.Forms.TextBox txtPreis;
-        public System.Windows.Forms.TextBox txtName;
-        public System.Windows.Forms.TextBox txtSpeiseID;
-        public System.Windows.Forms.PictureBox picBox;
         public System.Windows.Forms.Label label6;
         public System.Windows.Forms.Label label5;
         public System.Windows.Forms.Label label4;
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.Label label1;
+        internal System.Windows.Forms.ComboBox comboBox1;
+        internal System.Windows.Forms.TextBox textBildpfad;
+        internal System.Windows.Forms.TextBox txtPreis;
+        internal System.Windows.Forms.TextBox txtName;
+        internal System.Windows.Forms.TextBox txtSpeiseID;
+        internal System.Windows.Forms.PictureBox picBox;
     }
 }
