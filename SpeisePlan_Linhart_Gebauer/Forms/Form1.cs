@@ -80,6 +80,7 @@ namespace SpeisePlan_Linhart_Gebauer
         {
             frmZutaten frmzutaten = new frmZutaten();
             frmzutaten.Text = "Zutat hinzufügen";
+            
             frmzutaten.ShowDialog();
             //einlesenZutat();
         }
@@ -88,6 +89,7 @@ namespace SpeisePlan_Linhart_Gebauer
         {
             frmSpeisen frmspeisen = new frmSpeisen();
             frmspeisen.Text = "Speise hinzufügen";
+            frmspeisen.txtSpeiseID.Text = Speise.Autonum.ToString();
             frmspeisen.ShowDialog();
             einlesenSpeise();
         }
@@ -119,6 +121,7 @@ namespace SpeisePlan_Linhart_Gebauer
             frmSp.txtName.Text = lvItem.SubItems[2].Text;
             frmSp.txtPreis.Text = lvItem.SubItems[3].Text;
             frmSp.comboBox1.Text = lvItem.SubItems[4].Text;
+            frmSp.txtBildpfad.Text = lvItem.SubItems[5].Text;
             frmSp.ShowDialog();
             einlesenSpeise();
         }
@@ -141,5 +144,33 @@ namespace SpeisePlan_Linhart_Gebauer
                 einlesenSpeise();
             }
         }
+
+
+        internal void showImages()
+        {
+            ImageList bilderListe = new ImageList();
+            bilderListe.ColorDepth = ColorDepth.Depth32Bit; //damit Bilder nicht so pixelig
+            bilderListe.ImageSize = new System.Drawing.Size(32, 32);
+            bilderListe.Images.Clear();
+
+            foreach (Speise s in speisenListe)
+            {
+                try
+                {
+                    bilderListe.Images.Add(Image.FromFile(s.Bildpfad));
+                }
+                catch
+                {
+                    bilderListe.Images.Add(Image.FromFile(Application.StartupPath + "\\images\\default.jpg"));
+                    continue; //???
+                }
+               listView1.SmallImageList = bilderListe;
+               
+            }
+
+            listView1.SmallImageList = bilderListe;
+
+        }
+
     }
 }

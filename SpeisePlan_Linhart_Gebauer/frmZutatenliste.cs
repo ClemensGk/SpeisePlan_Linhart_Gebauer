@@ -25,7 +25,7 @@ namespace SpeisePlan_Linhart_Gebauer
         ListViewItem lvItemZ;
         internal List<Zutat> zutatenListe = new List<Zutat>();
         internal int inde;
-        internal XmlSerializer serializer;
+        internal XmlSerializer serializerZutaten;
 
 
         private void frmZutatenliste_Load(object sender, EventArgs e)
@@ -44,16 +44,33 @@ namespace SpeisePlan_Linhart_Gebauer
 
         internal void serialisierenZutaten()
         {
-            serializer = new XmlSerializer(zutatenListe.GetType());
-            FileStream fs = new FileStream("Zutatenliste.xml", FileMode.Create, FileAccess.Write, FileShare.None);
-            serializer.Serialize(fs, zutatenListe);
-            fs.Close();
+           
+            try
+            {
+                serializerZutaten = new XmlSerializer(zutatenListe.GetType());
+                FileStream fs = new FileStream("Zutatenliste.xml", FileMode.Create, FileAccess.Write, FileShare.None);
+                serializerZutaten.Serialize(fs, zutatenListe);
+                fs.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Fehler beim Serialisierender der Zutaten: " + ex.Message);
+            }
 
         }
 
          internal void deserialisierenZutaten()
         {
-            
+            try
+            {
+                FileStream fs = new FileStream("Zutatenliste.xml", FileMode.Open, FileAccess.Read, FileShare.None);
+                zutatenListe = (List<Zutat>)serializerZutaten.Deserialize(fs);
+                fs.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Fehler beim Deserialisierender der Zutaten: " + ex.Message);
+            }
         }
 
         #endregion

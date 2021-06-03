@@ -48,7 +48,7 @@ namespace SpeisePlan_Linhart_Gebauer
 
         public static int Autonum
         {
-            get { return Autonum; }
+            get { return autonum; }
             set { autonum = value; }
         }
 
