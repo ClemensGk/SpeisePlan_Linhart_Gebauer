@@ -49,7 +49,7 @@ namespace SpeisePlan_Linhart_Gebauer
                 s.Speiseart = Convert.ToChar(comboBox1.Text);
                 s.Bildpfad = txtBildpfad.Text;
                 
-                    Form1.f1.speisenListe.Add(s);
+                Form1.f1.speisenListe.Add(s);
             }
             else
             {

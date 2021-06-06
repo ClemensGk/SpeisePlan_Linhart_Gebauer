@@ -33,6 +33,9 @@ namespace SpeisePlan_Linhart_Gebauer
         {
             listView1.FullRowSelect = true;
             listView2.FullRowSelect = true;
+
+           // speisenListe.Add(new Speise(3, "Stück", 4, Convert.ToChar("H"), "\\images\\default.jpg"));
+            einlesenSpeise();
         }
 
 
@@ -59,6 +62,8 @@ namespace SpeisePlan_Linhart_Gebauer
 
         private void einlesenSpeise()
         {
+
+            //showImages();
             listView2.Items.Clear();
             for (int i = 0; i < speisenListe.Count; i++)
             {
