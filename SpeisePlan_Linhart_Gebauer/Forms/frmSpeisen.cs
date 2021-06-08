@@ -46,7 +46,7 @@ namespace SpeisePlan_Linhart_Gebauer
                 s.SpeiseID = Convert.ToInt32(txtSpeiseID.Text);
                 s.Name = txtName.Text;
                 s.Preis = Convert.ToInt16(txtPreis.Text);
-                s.Speiseart = Convert.ToChar(comboBox1.Text);
+                s.Speiseart = Convert.ToChar(comboBox1.Text);   
                 s.Bildpfad = txtBildpfad.Text;
                 
                 Form1.f1.speisenListe.Add(s);

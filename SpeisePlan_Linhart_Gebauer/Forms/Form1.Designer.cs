@@ -40,10 +40,10 @@
             this.zutatEntfernenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.neueZutatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listView2 = new System.Windows.Forms.ListView();
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.speiseHinzufügenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -76,7 +76,7 @@
             this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(917, 197);
-            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(813, 372);
             this.listView1.TabIndex = 0;
@@ -142,45 +142,41 @@
             // listView2
             // 
             this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader4,
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
+            this.columnHeader4,
             this.columnHeader5});
             this.listView2.ContextMenuStrip = this.contextMenuStrip2;
             this.listView2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView2.HideSelection = false;
             this.listView2.Location = new System.Drawing.Point(16, 197);
-            this.listView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView2.Margin = new System.Windows.Forms.Padding(4);
             this.listView2.Name = "listView2";
             this.listView2.Size = new System.Drawing.Size(829, 372);
             this.listView2.TabIndex = 3;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
             // 
-            // columnHeader4
-            // 
-            this.columnHeader4.DisplayIndex = 3;
-            this.columnHeader4.Text = "Speiseart";
-            this.columnHeader4.Width = 136;
-            // 
             // columnHeader1
             // 
-            this.columnHeader1.DisplayIndex = 0;
             this.columnHeader1.Text = "SpeiseID";
             this.columnHeader1.Width = 119;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.DisplayIndex = 1;
             this.columnHeader2.Text = "Speisename";
             this.columnHeader2.Width = 173;
             // 
             // columnHeader3
             // 
-            this.columnHeader3.DisplayIndex = 2;
             this.columnHeader3.Text = "Preis";
             this.columnHeader3.Width = 157;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Speiseart";
+            this.columnHeader4.Width = 136;
             // 
             // columnHeader5
             // 
@@ -334,11 +330,12 @@
             this.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.HelpButton = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.RightToLeftLayout = true;
             this.Text = "Speiseplan";
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.contextMenuStrip1.ResumeLayout(false);
             this.contextMenuStrip2.ResumeLayout(false);

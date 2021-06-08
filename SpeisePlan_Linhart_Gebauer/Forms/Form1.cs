@@ -26,21 +26,55 @@ namespace SpeisePlan_Linhart_Gebauer
         #region Variable
         ListViewItem lvItem;
         internal List<Speise> speisenListe= new List<Speise>();
-
+        internal XmlSerializer serializerSpeisen;
 
         #endregion
         private void Form1_Load(object sender, EventArgs e)
         {
+            speisenListe = new List<Speise>();
+
             listView1.FullRowSelect = true;
             listView2.FullRowSelect = true;
 
-           // speisenListe.Add(new Speise(3, "Stück", 4, Convert.ToChar("H"), "\\images\\default.jpg"));
+            // speisenListe.Add(new Speise(3, "Stück", 4, Convert.ToChar("H"), "\\images\\default.jpg"));
+            //deserialisierenSpeise();
             einlesenSpeise();
         }
 
 
         #region Methoden
 
+
+        internal void serialisierenSpeisen()
+        {
+
+            try
+            {
+                serializerSpeisen = new XmlSerializer(speisenListe.GetType());
+                FileStream fs = new FileStream("Speiseliste.xml", FileMode.Create, FileAccess.Write, FileShare.None);
+                serializerSpeisen.Serialize(fs, speisenListe);
+                fs.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Fehler beim Serialisierender der Speisen: " + ex.Message);
+            }
+
+        }
+
+        internal void deserialisierenSpeise()
+        {
+            try
+            {
+                FileStream fs = new FileStream("Speiseliste.xml", FileMode.Open, FileAccess.Read, FileShare.None);
+                speisenListe = (List<Speise>)serializerSpeisen.Deserialize(fs);
+                fs.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Fehler beim Deserialisierender der Speise: " + ex.Message);
+            }
+        }
 
         #endregion
 
@@ -63,13 +97,12 @@ namespace SpeisePlan_Linhart_Gebauer
         private void einlesenSpeise()
         {
 
-            //showImages();
+            showImages();
             listView2.Items.Clear();
             for (int i = 0; i < speisenListe.Count; i++)
             {
-                    lvItem = new ListViewItem();
+                    lvItem = new ListViewItem(speisenListe[i].SpeiseID.ToString());
                     lvItem.ImageIndex = i;
-                    lvItem.SubItems.Add(speisenListe[i].SpeiseID.ToString());
                     lvItem.SubItems.Add(speisenListe[i].Name);
                     lvItem.SubItems.Add(speisenListe[i].Preis.ToString());
                     lvItem.SubItems.Add(speisenListe[i].Speiseart.ToString());
@@ -177,5 +210,9 @@ namespace SpeisePlan_Linhart_Gebauer
 
         }
 
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            serialisierenSpeisen();
+        }
     }
 }
